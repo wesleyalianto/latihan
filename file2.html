@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Hello World</title>
+        <keyword></keyword>
+        <style>
+        </style>
+
+    </head>
+    <body>
+        <div>
+            <p id='text'>Hello World</p>
+            <p id='text'>Hello World</p>
+            <span>text1</span>
+            <span>text2</span>
+            <button>Ubah Text</button>    
+        </div>
+        <script src="test.js"></script>
+        <script>
+            var kabar = prompt('Silakan Masukan Angka Brapa Pun:');
+            alert('kuadrat dari'+ kabar + '=' + kabar**2);
+            console.log(kabar);
+        </script>
+    </body>
+</html>
+
+<script>
+    function a(x){
+        let a = Math.floor(x/365);
+        x = x - Math.floor(a*365);
+        let b = Math.floor(x/30);
+        x = x - Math.floor(b*30)
+        let c = Math.floor(x/7)
+        x = x - Math.floor(c*7)
+        console.log(a + 'tahun' + b + 'bulan' + c + 'minggu' + x)+ 'hari'}
+
+</script>
+function a(x){
+    let a = Math.floor(x/365);
+    let x = x - a*365;
+    let b = Math.floor(x/52);

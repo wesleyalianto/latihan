@@ -1,0 +1,68 @@
+<script>
+    //soal 1
+    var x = 4
+    var y = 3
+    var z = 2
+
+    var w = Math.pow(((x+y*z)/(x*y)), z);
+    console.log(w);
+
+    //soal 2
+    var angkaInput = prompt('Silahkan masukkan angka berapapun:');
+    alert('Kuadrat dari ' + angkaInput + ' = ' + Math.pow(angkaInput, 2));
+
+    //soal 3
+    console.log(Math.cbrt(8));
+
+    //soal 4
+    var total = 485;
+    var tahun = Math.floor(total/360);
+    var bulan = Math.floor((total%360)/30);
+    var minggu = Math.floor(((total%360)%30)/7);
+    var hari = Math.floor(((total%360)%30)%7);
+    console.log(total,'Hari adalah');
+    console.log(tahun, 'Tahun');
+    console.log(bulan, 'Bulan');
+    console.log(minggu, 'Minggu');
+    console.log(hari, 'Hari');
+
+    //soal 5
+    var total = 49;
+    var ratioTotal = 14;
+
+    var satuan = 49/ratioTotal;
+    var umurAndi = satuan*4;
+    var umurBudi = satuan*10;
+
+    console.log('Umur Andi 2 tahun lagi: '+ (umurAndi + 2));
+    console.log('Umur Budi 2 tahun lagi: ' + (umurBudi + 2));
+
+    //soal 6
+    var tanggalHariIni = new Date();
+    console.log('Hari ini tanggal ' + tanggalHariIni.getDate() + '-' + (tanggalHariIni.getMonth() + 1) + '-' + tanggalHariIni.getFullYear());
+    console.log('Besok tanggal ' + (tanggalHariIni.getDate() + 1) + '-' + (tanggalHariIni.getMonth() + 1) + '-' + tanggalHariIni.getFullYear());
+    console.log('Kemarin tanggal ' + (tanggalHariIni.getDate() - 1) + '-' + (tanggalHariIni.getMonth() + 1) + '-' + tanggalHariIni.getFullYear());
+
+    //soal 7
+    var kalimat = 'Halo Dunia';
+    var lengthAwal = kalimat.length;
+    var lengthAkhir = kalimat.replace(/a/g, '').length;
+    console.log('Banyaknya huruf a pada ' + kalimat + ' sebanyak ' + (lengthAwal-lengthAkhir) + ' buah');
+
+    //soal 8
+    var jarak = 120;
+    var kecepatanA = 60;
+    var kecepatanB = 40;
+    var pukulMulai = 9;
+
+    var lamaWaktuDetik = (120/((60/3600) + (40/3600)));
+    var jamTabrakan = pukulMulai + (Math.floor(lamaWaktuDetik/3600));
+    var menitTabrakan = Math.floor((lamaWaktuDetik%3600)/60);
+    var detikTabrakan = ((lamaWaktuDetik%3600)%60);
+
+    console.log('Total Lama Waktu tempuh dalam detik ' + lamaWaktuDetik);
+    console.log('Tabrakan terjadi pada waktu jam ' + jamTabrakan + ' menit ' + menitTabrakan + ' detik ' + detikTabrakan);
+
+    //soal 9
+    document.write(Math.round(Math.random() * 100));
+</script>

@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Hello World</title>
+        <keyword></keyword>
+        <style>
+        </style>
+
+    </head>
+    <body>
+        <div>
+        <form id="form">
+            <table>
+                <tr>
+                    <th>Ketik Kalimat</th>
+                    <th>:</th>
+                    <th><input id = "name" type="text"></th>
+                </tr>
+                <tr>
+                    <th>Karakter yang dicari</th>
+                    <th>:</th>
+                    <th><input id = "name2" type="text"></th>
+                </tr>
+                </table>
+        </form>
+        <button onclick="fungsiKu()"> Cari </button>
+        </div>
+        <br>
+        <span id="tes"></span>
+        <script>
+        function fungsiKu() {
+            let input1 = document.getElementById("name").value;
+            let huruf = document.getElementById("name2").value;
+            let jumlah = 0;
+            // let regex = /huruf/g;
+            let regex = new RegExp(huruf, "g");
+            let jumlah_karakter = input1.match(regex).length;
+            document.getElementById("tes").innerHTML = "<span><b> Jumlah </b></span>" + huruf + "<span><b> sebanyak <b></span>" + "<span> </span>" + jumlah_karakter + "<span> buah. </span>";
+        }
+        </script>
+    </body>
+</html>

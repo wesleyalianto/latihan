@@ -1,0 +1,30 @@
+<p id="NamaLengkap">Nama Lengkap: </p>
+<p id="UmurTahun">Umur Tahun: </p>
+<p id="UmurBulan">Umur Bulan: </p>
+<p id="UmurHari">Umur Hari: </p>
+<p id="Profesi">Profesi: </p>
+
+<script>
+    alert('Selamat datang di Purwadhika!!');
+    alert('Mohon isi data2 yang diperlukan');
+
+    var namaDepan = prompt('Nama Depan :');  
+
+    var namaBelakang = prompt('Nama Belakang :');
+    var UmurTahun = parseInt(prompt('Umur (Tahun) :'));
+
+    var UmurBulan = UmurTahun * 12;
+    var UmurHari = UmurTahun * 365;
+
+    var profesi = prompt('Profesi :');
+
+    alert('Terima kasih sudah mengisi datanya!');
+
+    document.getElementById("NamaLengkap").innerHTML = 'Nama Lengkap: ' + namaDepan + ' ' + namaBelakang;
+    document.getElementById("UmurTahun").innerHTML = 'Umur Tahun: ' + UmurTahun;
+    document.getElementById("UmurBulan").innerHTML = 'Umur Bulan: ' + UmurBulan;
+    document.getElementById("UmurHari").innerHTML = 'Umur Hari: ' + UmurHari;
+    document.getElementById("Profesi").innerHTML = 'Profesi: ' + profesi;
+    
+</script>
+

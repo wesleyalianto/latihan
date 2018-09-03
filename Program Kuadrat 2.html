@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Hello World</title>
+        <keyword></keyword>
+        <style>
+        </style>
+
+    </head>
+    <body>
+        <div>
+        <form id="form">
+            <table>
+                <tr>
+                    <th>Masukan Angka</th>
+                    <th>:</th>
+                    <th><input id = "name" type="text"></th>
+                </tr>
+                <tr>
+                    <th>Masukan Angka 2</th>
+                    <th>:</th>
+                    <th><input id = "name2" type="text"></th>
+                </tr>
+                </table>
+        </form>
+        <button onclick="fungsiKu()"> Pangkatkan </button>
+        </div>
+        <br>
+        <span id="tes"></span>
+        <script>
+        function fungsiKu() {
+            let input1 = document.getElementById("name").value;
+            let input2 = document.getElementById("name2").value;
+            document.getElementById("tes").innerHTML = "<span><b> Hasil dari </b></span>" + input1 + "<span><b><sup>" + input2 +"</sup> = <b></span>" + "<span> </span>" + input1**input2;
+        }
+        </script>
+    </body>
+</html>

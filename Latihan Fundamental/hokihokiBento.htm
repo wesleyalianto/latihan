@@ -1,0 +1,55 @@
+<script>
+    alert('Selamat datang di hoki-hoki bento');
+    var namaMenu = '';
+    var harga = 0;
+    for(;;)
+    {
+        var pilihan = prompt("1. Lihat & Pesan Menu \n2. Lihat Cart \n3. Bayar \n4. Keluar \n\nInput Pilihan: ");
+
+        if(pilihan == 1)
+        {
+            var menuPilihan = prompt('Menunya : \n1. Paket Bento A Rp.20.000 \n2. Paket Bento B Rp.25.000 \n3. Paket Bento C Rp.30.000 \n\nMau yang mana?');
+            if(menuPilihan == 1)
+            {
+                alert('Kamu memilih Paket Bento A Rp.20.000');
+                namaMenu = 'Paket Bento A Rp. 20.000';
+                harga = 20000;
+            }
+            else if(menuPilihan == 2)
+            {
+                alert('Kamu memilih Paket Bento B Rp.25.000');
+                namaMenu = 'Paket Bento B Rp. 25.000';
+                harga = 25000;
+            }
+            else if(menuPilihan == 3)
+            {
+                alert('Kamu memilih Paket Bento C Rp.30.000');
+                namaMenu = 'Paket Bento C Rp. 30.000';
+                harga = 30000;
+            }
+        }
+        else if(pilihan == 2)
+        {
+            alert('Isi Cart: \n1. ' + namaMenu);
+        }
+        else if(pilihan == 3)
+        {
+            var uangBayar = parseInt(prompt('Paket yang ingin dibeli: \n\n' + namaMenu + '\n\nHarga yang harus dibayar : \n\nRp. ' + harga + '\n\nUang Anda?'));
+            var kembalian = uangBayar - harga;
+            if(kembalian < 0)
+            {
+                alert('Uang anda Kurang!!');
+            }
+            else
+            {
+                alert('Kembalian sebesar: Rp. ' + kembalian);
+            }
+        }
+        else if(pilihan == 4)
+        {
+            alert('Sampai Jumpa dan terima kasih');
+            break;
+        }
+    }
+    
+</script>

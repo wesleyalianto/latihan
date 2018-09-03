@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Hello World</title>
+        <keyword></keyword>
+        <style>
+        </style>
+
+    </head>
+    <body>
+        <div>
+        <form id="form">
+            <table>
+                <tr>
+                    <td>1. Siapakah Presiden Ketiga Republik Indonesia?</td>
+                </tr>
+                <tr>
+                    <td><span><input type="radio" name= "1" value="a"> BJ Habibi</span>
+                        <span></span><input type="radio" name= "1" value="b"> Abdurahman Wahid</span>
+                        <span><input type="radio" name= "1" value="c"> IR Soekarno</span>
+                        <span></span><input type="radio" name= "1" value="d"> Joko Widodo</span></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td>2. Berikut adalah nama-nama bahasa pemograman,kecuali?</td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td><span><input type="radio" name= "2" value="a"> Python</span>
+                        <span></span><input type="radio" name= "2" value="b"> Microbit</span>
+                        <span><input type="radio" name= "2" value="c"> Javascript</span>
+                        <span></span><input type="radio" name= "2" value="d"> HTML</span></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td>3. Apa judul lagu yang diduga plagiat oleh lagi Sayang Via Vallen?</td>
+                </tr>
+                <tr>
+                    <td><span><input type="radio" name= "3" value="a"> Qing De Fei Yi</span>
+                        <span></span><input type="radio" name= "3" value="b"> ting Hai </span>
+                        <span><input type="radio" name= "3" value="c">Mirai E Koro </span>
+                        <span></span><input type="radio" name= "3" value="d"> Hau Siang Hau Siang</span></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                        <td>4. Siapakah sosok dibalik topeng Batman?</td>
+                    </tr>
+                    <tr>
+                        <td><span><input type="radio" name= "4" value="a"> Natasha ROmanov </span>
+                            <span></span><input type="radio" name= "4" value="b"> Peter Parker</span>
+                            <span><input type="radio" name= "4" value="c">Tony Stark</span>
+                            <span></span><input type="radio" name= "4" value="d"> Bruce Wayne</span></td>
+                    </tr>
+                </table>
+        </form>
+        <button onclick="fungsiKu()"> submit </button>
+        </div>
+        <br>
+        <span id="tes"></span>
+        <script>
+        function fungsiKu() {
+            let input1 = document.querySelector('input[name="1"]:checked').value;
+            let input2 = document.querySelector('input[name="2"]:checked').value;
+            let input3 = document.querySelector('input[name="3"]:checked').value;
+            let input4 = document.querySelector('input[name="4"]:checked').value;
+            let jumlah = 0;
+            if (input1=="a"){jumlah = jumlah+25};
+            if (input2=="b"){jumlah = jumlah+25};
+            if (input3=="c"){jumlah = jumlah+25};
+            if (input4=="d"){jumlah = jumlah+25};
+            document.getElementById("tes").innerHTML = "<h1><span> Nilai Akhir Anda adalah </span>" + jumlah + "</h1>" ;
+        }
+        </script>
+    </body>
+</html>

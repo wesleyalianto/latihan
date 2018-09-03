@@ -1,0 +1,36 @@
+<form id="form1">
+    <p>Name : <input type="text" /></p>
+    <p>Age : <input type="number" /></p>
+    <p />Sex : <input type="radio" name="sex" value="Pria" /> Pria
+    <input type="radio" name="sex" value="Wanita"> Wanita
+    <br />
+    <br />
+</form>
+<button onclick="fungsiKu2()"> Coba Klik! </button>
+<p id="outputName"></p>
+<p id="outputAge"></p>
+<p id="outputSex"></p>
+
+<script> 
+    var sex = '';
+ 
+    function fungsiKu2() {
+        var nama = document.getElementById("form1").elements[0].value;
+        var age = document.getElementById("form1").elements[1].value;
+        if(document.getElementById("form1").elements[2].checked == true)
+        {
+            sex = document.getElementById("form1").elements[2].value;
+        }
+        else if(document.getElementById("form1").elements[3].checked == true)
+        {
+            sex = document.getElementById("form1").elements[3].value;
+        }
+        document.getElementById("outputName").innerHTML = 'Name: ' + nama;
+        document.getElementById('outputAge').innerHTML = "Age: " + age;
+        document.getElementById("outputSex").innerHTML = "Sex: " + sex;
+
+        console.log('Name: ' + nama);
+        console.log("Age: " + age);
+        console.log("Sex: " + sex);
+    }
+</script>

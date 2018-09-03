@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>Hello World</title>
+        <keyword></keyword>
+        <style>
+        </style>
+
+    </head>
+    <body>
+        <div>
+        <form id="form">
+            <table>
+                <tr>
+                    <th>Masukan Angka 1</th>
+                    <th>:</th>
+                    <th><input id = "name" type="text"></th>
+                </tr>
+                <tr>
+                    <th>Masukan Angka 2</th>
+                    <th>:</th>
+                    <th><input id = "name2" type="text"></th>
+                </tr>
+                </table>
+        </form>
+        <button onclick="Kali()"> kali </button>
+        <button onclick="Bagi()"> Bagi </button>
+        <button onclick="Tambah()"> Tambah </button>
+        <button onclick="Kurang()"> Kurang </button>
+        <button onclick="Modulus()"> Modulus </button>
+        <button onclick="Pangkat()"> Pangkat </button>
+        </div>
+        <br>
+        <span id="tes"></span>
+        <script>
+        function Kali() {
+            let input1 = document.getElementById("name").value;
+            let input2 = document.getElementById("name2").value;
+            let jawaban = input1*input2;
+            document.getElementById("tes").innerHTML =  input1 + "<span><b> X <b></span>" +  input2 + "<span> = </span>" + jawaban;
+        }
+        function Bagi() {
+            let input1 = document.getElementById("name").value;
+            let input2 = document.getElementById("nsame2").value;
+            let jawaban = input1/input2;
+            document.getElementById("tes").innerHTML =  input1 + "<span><b> / <b></span>" +  input2 + "<span> = </span>" + jawaban;
+        }
+        function Tambah() {
+            let input1 = document.getElementById("name").value;
+            let input2 = document.getElementById("name2").value;
+            let jawaban = (parseInt(input1) + parseInt(input2));
+            document.getElementById("tes").innerHTML =  input1 + "<span><b> + <b></span>" +  input2 + "<span> = </span>" + jawaban;
+        }
+        function Kurang() {
+            let input1 = document.getElementById("name").value;
+            let input2 = document.getElementById("name2").value;
+            let jawaban = input1-input2;
+            document.getElementById("tes").innerHTML =  input1 + "<span><b> - <b></span>" +  input2 + "<span> = </span>" + jawaban;
+        }
+        function Modulus() {
+            let input1 = document.getElementById("name").value;
+            let input2 = document.getElementById("name2").value;
+            let jawaban = input1%input2;
+            document.getElementById("tes").innerHTML =  input1 + "<span><b> % <b></span>" +  input2 + "<span> = </span>" + jawaban;
+        }
+        function Pangkat() {
+            let input1 = document.getElementById("name").value;
+            let input2 = document.getElementById("name2").value;
+            let jawaban = input1**input2;
+            document.getElementById("tes").innerHTML =  input1 + "<span><b><sup>" +  input2 + "</sup> <b></span><span> = </span>" + jawaban;
+        }
+        let kali = (x, y) => {
+            return x * y;
+        };
+        let bagi = (x, y) => {
+            return x / y;
+        };
+        let tambah = (x, y) => {
+            return x + y;
+        };
+        let kurang = (x, y) => {
+            return x - y;
+        };
+        let modulus = (x, y) => {
+            return x % y;
+        }
+        let pangkat = (x, y) => {
+            return x ** y;
+        }
+        let hitung = (no1, no2, op) => {
+            jawaban = op(no1, no2);
+            document.getElementById("tes").innerHTML =  input1 + "<span><b><sup>" +  input2 + "</sup> <b></span><span> = </span>" + jawaban;
+        };
+       
+        Array.prototype.aaa = (w,callback) => {
+            const Array = this.sort(w)
+            const hasil = []
+            console.log(Array)
+            for (i = 0; i <Array.length; i ++) {
+                if (callback(Array[i]) == true) {
+                    hasil.push(Array[i]) 
+                }
+            } return hasil
+        }
+        const filter = (array,callback) => {
+            const hasil = []
+            for (i = 0; i <array.length; i ++) {
+                if (callback(array[i]) == true) {
+                    hasil.push(array[i]) 
+                }
+            } return hasil
+        }
+        </script>
+    </body>
+</html>
+

@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Hello World</title>
+        <keyword></keyword>
+        <style>
+        </style>
+
+    </head>
+    <body>
+        <div>
+        <form id="form">
+            <table>
+                <tr>
+                    <th>Masukan Angka :</th>
+                </tr>
+                <tr>
+                    <th><input id = "name" type="text"></th>
+                </tr>
+                </table>
+        </form>
+        <button onclick="fungsiKu()"> Kuadratkan </button>
+        </div>
+        <br>
+        <span id="tes"></span>
+        <script>
+        function fungsiKu() {
+            let input1 = document.getElementById("name").value;
+            document.getElementById("tes").innerHTML = "<span><b> Hasil dari </b></span>" + input1 + "<span><b><sup>2</sup> = <b></span>" + "<span> </span>" + input1**2;
+        }
+        </script>
+    </body>
+</html>

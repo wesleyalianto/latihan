@@ -1,0 +1,59 @@
+<form id="form1">
+    <p>Name : <input type="text" /></p>
+    <p>Umur : <input type="number" /></p>
+    <p>Pekerjaan : <input type="text" /></p>
+    <p />Kelamin : <input type="radio" name="sex" value="Pria" /> Pria
+    <input type="radio" name="sex" value="Wanita"> Wanita
+    <br />
+    <br />
+</form>
+<button onclick="fungsiKu2()"> Submit! </button>
+
+<table id="tableData" style="border: 1px solid black;
+border-collapse: collapse;">
+
+</table>
+
+<script> 
+    var arrData = [];
+
+    class orang {
+        constructor(nama, usia, job, sex) {
+            this.nama = nama;
+            this.umur = usia;
+            this.pekerjaan = job;
+            this.kelamin = sex;
+        }
+    }
+ 
+    function fungsiKu2() {
+        var newPerson = new orang();
+        newPerson.nama = document.getElementById("form1").elements[0].value;
+        newPerson.umur = document.getElementById("form1").elements[1].value;
+        newPerson.pekerjaan = document.getElementById("form1").elements[2].value;
+        if(document.getElementById("form1").elements[3].checked == true)
+        {
+            newPerson.kelamin = document.getElementById("form1").elements[3].value;
+        }
+        else if(document.getElementById("form1").elements[4].checked == true)
+        {
+            newPerson.kelamin = document.getElementById("form1").elements[4].value;
+        }
+        arrData.push(newPerson);
+
+        var outPut = '<tr style="border: 1px solid black; border-collapse: collapse;"><th style="border: 1px solid black;border-collapse: collapse;">Nama</th><th style="border: 1px solid black;border-collapse: collapse;">Umur</th><th style="border: 1px solid black;border-collapse: collapse;">Kelamin</th><th style="border: 1px solid black;border-collapse: collapse;">Pekerjaan</th></tr>';
+        
+        for(var i = 0; i < arrData.length; i++)
+        {
+            var templateRow = '<tr style="border: 1px solid black;border-collapse: collapse;"><td>' + arrData[i].nama + '</td><td>' + arrData[i].umur + '</td><td>' + arrData[i].kelamin + '</td><td>' + arrData[i].pekerjaan + '</td></tr>';
+            outPut += templateRow;
+            console.log('\nData ke ' + (i + 1) + '\n\n')
+            console.log('Nama : ' + arrData[i].nama);
+            console.log('Umur : ' + arrData[i].umur);
+            console.log('Kelamin : ' + arrData[i].kelamin);
+            console.log('Pekerjaan : ' + arrData[i].pekerjaan);
+        }
+
+        document.getElementById("tableData").innerHTML = outPut;
+    }
+</script>

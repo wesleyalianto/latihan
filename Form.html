@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Hello World</title>
+        <keyword></keyword>
+        <style>
+        </style>
+
+    </head>
+    <body>
+        <div>
+        <form id="form">
+            <table>
+                <tr>
+                    <th>Nama Awal:</th>
+                    <th>:</th>
+                    <th><input id = "name" type="text"></th>
+                </tr>
+                <tr>
+                    <th>Nama Akhir:</th>
+                    <th>:</th>
+                    <th><input id = "name2" type="text"></th>
+                </tr>
+                <tr>
+                    <th>Umur</th>
+                    <th>:</th>
+                    <th><input id = "name3" type="text"></th>
+                </tr>
+                <tr>
+                    <th>Jenis Kelamin</th>
+                    <th>:</th>
+                    <th><span><input type="radio" name= "gender" value="Perempuan"> Perempuan</span>
+                        <span></span><input type="radio" name= "gender" value="Laki-Laki"> Laki-Laki</span></th>
+                </tr>
+            </table>
+            <br>
+        </form><br>
+        <button onclick="fungsiKu()"> Coba klik! </button>
+        </div>
+        <br>
+        <span> Nama Awal : <span id="tes"> Hasil </span>
+        <br>
+        <span>Jenis Kelamin : </span><span id="tes2"> Hasil </span>
+        <br>
+        <span>Umur : </span><span id="tes3"> Hasil </span>
+        <script>
+        function fungsiKu() {
+            let input1 = document.getElementById("name").value;
+            let input2 = document.getElementById("name2").value;
+            document.getElementById("tes").innerHTML = input1 + "<span> </span>" + input2;
+            let input3 = document.querySelector('input[name="gender"]:checked').value;
+            document.getElementById("tes2").innerHTML = input3;
+            let input4 = document.getElementById("name3").value;
+            document.getElementById("tes3").innerHTML = input4;
+        }
+        </script>
+    </body>
+</html>

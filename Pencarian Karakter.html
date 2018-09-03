@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Hello World</title>
+        <keyword></keyword>
+        <style>
+        </style>
+
+    </head>
+    <body>
+        <div>
+        <form id="form">
+            <table>
+                <tr>
+                    <th>Ketik Kalimat</th>
+                    <th>:</th>
+                    <th><input id = "name" type="text"></th>
+                </tr>
+                <tr>
+                    <th>Karakter yang dicari</th>
+                    <th>:</th>
+                    <th><input id = "name2" type="text"></th>
+                </tr>
+                </table>
+        </form>
+        <button onclick="fungsiKu()"> Cari </button>
+        </div>
+        <br>
+        <span id="tes"></span>
+        <script>
+        function fungsiKu() {
+            let input1 = document.getElementById("name").value;
+            let huruf = document.getElementById("name2").value;
+            let input2 = input1.split("");
+            let jumlah = 0
+            for (i = 0 ; i < input2.length;i++){
+                if (input2[i]==huruf){jumlah = jumlah+1}
+            }
+            document.getElementById("tes").innerHTML = "<span><b> Jumlah </b></span>" + huruf + "<span><b> sebanyak <b></span>" + "<span> </span>" + jumlah + "<span> buah. </span>";
+        }
+        </script>
+    </body>
+</html>
